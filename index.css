@@ -54,4 +54,32 @@ li {
     body {
         font-size: 12pt;
     }
+
+    /* Remove unnecessary elements for printing */
+    @page {
+        margin: 1in;
+    }
+
+    /* Avoid page numbers and extra elements */
+    header, section {
+        page-break-before: auto;
+        page-break-after: avoid;
+    }
+}
+
+/* Print Button (optional) */
+.print-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #333;
 }
