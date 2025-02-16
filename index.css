@@ -49,23 +49,6 @@ li {
     margin: 5px 0;
 }
 
-/* Print Button */
-.print-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    background: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.print-button:hover {
-    background: #333;
-}
-
 /* Printable PDF Styles */
 @media print {
     body {
@@ -82,9 +65,21 @@ li {
         page-break-before: auto;
         page-break-after: avoid;
     }
+}
 
-    /* Hide the Print button when printing */
-    .print-button {
-        display: none;
-    }
+/* Print Button (optional) */
+.print-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background: #333;
 }
