@@ -1,22 +1,17 @@
-/* Global styles for screen */
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
 }
 
+h1 {
+    color: #333;
+}
+
 header {
     text-align: center;
-}
-
-h1 {
-    margin: 0;
-}
-
-h2 {
-    color: #333;
-    font-size: 1.5em;
-    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
 }
 
 section {
@@ -38,9 +33,15 @@ ul li:before {
     left: 0;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
+.resume {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+}
+
+.resume h2 {
+    color: #333;
 }
 
 .print-button {
@@ -52,20 +53,17 @@ footer {
     cursor: pointer;
 }
 
-/* Styles for print */
+/* Print styles */
 @media print {
     body {
         background-color: white;
     }
 
-    /* Hide print button when printing */
     .print-button {
         display: none;
     }
 
-    /* Ensure all sections are properly formatted for printing */
-    section {
+    .resume {
         page-break-inside: avoid;
     }
 }
-
