@@ -11,6 +11,18 @@ body {
     color: #000;
     line-height: 1.6;
     padding: 20px;
+    text-align: center; /* Centers the content */
+}
+
+/* Resume Container */
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border: 3px solid #000; /* Adds border around the entire resume */
+    border-radius: 10px; /* Optional: rounded edges */
+    text-align: left; /* Aligns text properly */
 }
 
 /* Header */
@@ -31,6 +43,10 @@ header p {
 /* Section Styles */
 section {
     margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #000; /* Ensures borders are visible */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray background for readability */
 }
 
 h2 {
@@ -38,8 +54,10 @@ h2 {
     border-bottom: 2px solid #000;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -49,25 +67,7 @@ li {
     margin: 5px 0;
 }
 
-/* Printable PDF Styles */
-@media print {
-    body {
-        font-size: 12pt;
-    }
-
-    /* Remove unnecessary elements for printing */
-    @page {
-        margin: 1in;
-    }
-
-    /* Avoid page numbers and extra elements */
-    header, section {
-        page-break-before: auto;
-        page-break-after: avoid;
-    }
-}
-
-/* Print Button (optional) */
+/* Print Button */
 .print-button {
     display: block;
     margin: 20px auto;
@@ -78,8 +78,29 @@ li {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .print-button:hover {
     background: #333;
+}
+
+/* Printable PDF Styles */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    @page {
+        margin: 1in;
+    }
+
+    .print-button {
+        display: none; /* Hides the button in print mode */
+    }
+
+    header, section {
+        page-break-before: auto;
+        page-break-after: avoid;
+    }
 }
